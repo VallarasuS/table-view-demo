@@ -11,8 +11,8 @@ export class TableViewComponent implements OnInit, AfterViewInit {
   @Input('source') source : Array<any>;
   @Input('columns') columns : Array<string>;
 
-  private tableOnly : boolean = true;
-  private viewOnly : boolean = false;
+  tableOnly : boolean = true;
+  viewOnly : boolean = false;
 
   constructor() { 
     this.toggleTable = this.toggleTable.bind(this);

@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'grid-table-view'`, () => {
+  it(`should have as title 'table-view-demo'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('grid-table-view');
+    expect(app.title).toEqual('table-view-demo');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to grid-table-view!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to table-view-demo!');
   });
 });

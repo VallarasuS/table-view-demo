@@ -9,7 +9,7 @@ declare function require(url:string):any;
 })
 export class AppComponent implements OnInit {
 
-  title = 'grid-table-view';
+  title = 'table-view-demo';
 
   sourceData = {}
 
