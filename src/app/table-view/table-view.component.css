@@ -1,0 +1,35 @@
+
+.header {
+    text-align: center;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+
+.row {
+    display: table-row;
+    padding: 10px 10px;
+}
+
+.cell {
+    display: table-cell;
+    padding: 10px 10px;
+}
+
+.action-row {
+    align-content: flex-end;
+}
+
+.alternate {
+    background: lightgray;
+}
+
+.visual {
+    width: 100%;
+    height: 300px;
+    margin-top:20px;
+}
+
+.bar {
+    width: 10px;
+    fill: skyblue;
+}

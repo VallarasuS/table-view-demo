@@ -1,0 +1,32 @@
+  <div id='table-view-container'>
+
+    <div ngClass='action-row' >
+        <button (click)="toggleTable()" >table</button>
+        <button (click)="toggleView()" >view</button>
+        <button (click)="enableTableView()">table view</button>
+    </div>
+
+    <div id='view' *ngIf="viewOnly">
+      <svg ngClass="visual">
+        <g *ngFor="let item of source; let i = index" [style.transform]="'translate(' + 50 * i + 'px, 0px)'" >
+          <rect ngClass="bar" [attr.height]= "(item['age'] / 100) * 400 + 'px'"></rect>
+        </g>
+      </svg>
+    </div>
+
+    <div id='table' *ngIf="tableOnly">
+        <div ngClass='row header'>
+          <div *ngFor="let header of columns" ngClass='cell'>
+            {{header}}
+          </div>
+        </div>
+
+        <div *ngFor="let item of source; let odd=odd" [class.alternate]="odd" ngClass='row'>
+           <div *ngFor="let colum of columns;"  ngClass='cell'>
+              {{ item[colum] }}
+           </div>
+        </div>
+
+    </div>
+
+  </div>
